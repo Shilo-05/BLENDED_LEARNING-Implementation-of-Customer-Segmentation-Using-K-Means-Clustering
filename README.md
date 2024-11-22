@@ -1,11 +1,9 @@
-# BLENDED LEARNING
+
+
 # Implementation of Customer Segmentation Using K-Means Clustering
 
-```
-Oswald Shilo
-212223040139
-```
-
+### Developed by: Oswald Shilo
+### RegisterNumber: 212223040139
 ## AIM:
 To implement customer segmentation using K-Means clustering on the Mall Customers dataset to group customers based on purchasing habits.
 
@@ -37,9 +35,8 @@ To implement customer segmentation using K-Means clustering on the Mall Customer
    
 ## Program:
 ```
-/*
-Program to implement customer segmentation using K-Means clustering on the Mall Customers dataset.
-*/
+# Program to implement customer segmentation using K-Means clustering on the Mall Customers dataset.
+
 
 # Import necessary libraries
 import pandas as pd
@@ -97,32 +94,19 @@ data['Cluster'] = kmeans.labels_
 sil_score = silhouette_score(X_scaled, kmeans.labels_)
 print(f'Silhouette Score: {sil_score}')
 
-# Define a more distinct palette with different colors
-palette = sns.color_palette("bright", optimal_clusters)
-
 # Visualize the clusters based on 'Annual Income (k$)' and 'Spending Score (1-100)'
 plt.figure(figsize=(10, 6))
-sns.scatterplot(
-    data=data,
-    x='Annual Income (k$)',
-    y='Spending Score (1-100)',
-    hue='Cluster',
-    palette=palette,
-    s=100,
-    alpha=0.7
-)
+sns.scatterplot(data=data, x='Annual Income (k$)', y='Spending Score (1-100)', hue='Cluster', palette='viridis', s=100, alpha=0.7)
 plt.title('Customer Segmentation based on Annual Income and Spending Score')
 plt.xlabel('Annual Income (k$)')
 plt.ylabel('Spending Score (1-100)')
 plt.legend(title='Cluster')
 plt.show()
 
-
-
 ```
 
 ## Output:
-![image](https://github.com/user-attachments/assets/904c855a-8e47-4719-8ab2-ad0ae4e061bd)
+<img width="863" alt="Screenshot 2024-11-14 at 11 36 27 AM" src="https://github.com/user-attachments/assets/c90ffe7b-c8c1-426c-aa01-9afbc33a834f">
 
 
 ## Result:
